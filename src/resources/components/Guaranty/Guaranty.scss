@@ -1,0 +1,46 @@
+@import "@/assets/sass/media";
+
+.background-container {
+  .background-container-style {
+    .guaranties-section-container {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.09);
+      border-radius: 15px;
+      padding: 20px;
+
+      .header-guaranty-parent {
+        justify-content: center;
+
+        .guaranty-title {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* responsive */
+
+@include breakpoint(medium) {
+  .guaranties-section-container {
+    .svg-icons-guaranty-parent {
+      flex-wrap: wrap;
+      justify-content: flex-start !important;
+
+      .single-guaranty-parent {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@include breakpoint(650px) {
+  .guaranties-section-container {
+    .svg-icons-guaranty-parent {
+      .single-guaranty-parent {
+        width: 100%;
+      }
+    }
+  }
+}
