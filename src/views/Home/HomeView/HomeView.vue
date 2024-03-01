@@ -2,7 +2,6 @@
   <div
     id="page-container"
     class="d-flex flex-column flex-grow-1"
-    @click="clickOutside"
   >
     <Header @toggle-drawer="toggleDrawer" />
 
