@@ -1,0 +1,80 @@
+@import "@/assets/sass/variable";
+@import "@/assets/sass/media";
+
+.banner {
+  display: flex;
+  flex: 1;
+  min-height: 50em;
+  background: url("@/assets/images/home-banner.png") no-repeat scroll center
+    center;
+  background-size: cover;
+  background-color: #ecf0f9;
+
+  .content-parent {
+    justify-content: center;
+    margin-left: 10em;
+
+    .title {
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .content-text-style {
+      color: $white;
+    }
+
+    .banner-button-parent {
+      .btn-style {
+        padding: 8px 20px;
+        background: linear-gradient(to right, #ff611a, #fa9d73);
+        color: #162b64;
+        border-radius: 7px;
+        border: 2px solid $white;
+        font-weight: bold;
+
+      }
+    }
+  }
+}
+
+/* responsive */
+
+@include breakpoint(large) {
+  .banner {
+    .content-parent {
+      margin-left: 1em !important;
+    }
+  }
+}
+
+@include breakpoint(800px) {
+  .banner {
+    background-size: cover;
+    min-height: auto;
+    padding: 5rem 0;
+
+    .content-parent {
+      .title {
+        font-size: 30px !important;
+      }
+
+      .content-text-style {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@include breakpoint(555px) {
+  .banner {
+    .content-parent {
+      .title {
+        font-size: 23px !important;
+      }
+
+      .content-text-style {
+        font-size: 12px;
+      }
+    }
+  }
+}

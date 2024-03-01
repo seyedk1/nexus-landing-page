@@ -1,0 +1,82 @@
+@import "@/assets/sass/variable";
+@import "@/assets/sass/media";
+
+.background-container {
+  .background-container-style {
+    .about-nexus-parent {
+      margin-top: 6rem;
+
+      .about-nexus-content {
+        padding-bottom: 5rem;
+        padding-left: 4rem;
+        justify-content: space-evenly;
+
+        .about-text {
+          line-height: 1.6;
+        }
+
+        .about-nexus-btn-parent {
+          .btn-style {
+            padding: 5px 15px;
+            color: $white;
+            background: linear-gradient(to bottom right, #fa9d73, #ff611a);
+            border-radius: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* responsive */
+
+@include breakpoint(885px) {
+  .background-container {
+    .background-container-style {
+      .about-nexus-parent {
+        padding: 0 1rem;
+
+        .about-nexus-content {
+          width: 50%;
+          padding-left: 0;
+        }
+
+        .about-nexus-image-parent {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(700px) {
+  .background-container {
+    .background-container-style {
+      .about-nexus-parent {
+        flex-direction: column;
+        align-items: center;
+
+        .about-nexus-content {
+          width: 100%;
+
+          .about-title-parent {
+            align-self: center;
+          }
+
+          .about-text {
+            align-self: center;
+            text-align: center;
+          }
+
+          .about-nexus-btn-parent {
+            display: none;
+          }
+        }
+
+        .about-nexus-image-parent {
+          width: 60%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+@import "@/assets/sass/variable";
+@import "@/assets/sass/media";
+
+#footer {
+  background-image: linear-gradient(to bottom, #152a63, #101a38);
+
+  .footer-content {
+    padding: 2rem 0;
+
+    .logo--follow-us-parent {
+      justify-content: center;
+      flex-direction: column;
+
+      .social-media-parent {
+        margin-top: 2rem;
+
+        .text-style {
+          color: $white;
+        }
+      }
+    }
+
+    .contact-us-parent {
+      color: $white;
+
+      .text-style {
+        font-weight: bold;
+      }
+
+      .second-row-parent {
+        p {
+          color: #cccbcb;
+        }
+      }
+    }
+
+    .countries--about--contact-us-parent {
+      justify-content: space-between;
+      color: $white;
+
+      .first-row {
+        justify-content: space-between;
+      }
+
+      .second-row {
+        .countries-parent {
+          .countries-style {
+            margin-left: 1px;
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* responsive */
+@include breakpoint(medium) {
+  .footer-content {
+    max-width: 100%;
+
+    .countries--about--contact-us-parent {
+      .second-row {
+        .countries-parent {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(900px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+
+    .logo--follow-us-parent {
+      align-items: center;
+      width: 100%;
+
+      .social-media-parent {
+        .text-style {
+          color: $white;
+          text-align: center;
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .contact-us-parent {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin: 3rem 0;
+      width: 100%;
+
+      .text-style {
+        font-weight: bold;
+      }
+
+      .second-row-parent {
+        text-align: center;
+      }
+
+      .numbers-parent {
+        align-items: center;
+      }
+    }
+
+    .countries--about--contact-us-parent {
+      width: 100%;
+
+      .first-row {
+        justify-content: center !important;
+
+        .about-us-news-parent {
+          flex-direction: row !important;
+
+          span {
+            margin: 0 1rem;
+            border: 1px solid $white;
+            padding: 5px 15px;
+            border-radius: 10px;
+          }
+        }
+
+        .contact-us-help-parent {
+          flex-direction: row !important;
+
+          span {
+            margin: 0 1rem;
+            border: 1px solid $white;
+            padding: 5px 15px;
+            border-radius: 10px;
+          }
+        }
+      }
+
+      .second-row {
+        align-items: center;
+        margin-top: 1rem;
+
+        span {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .countries-parent {
+          .countries-style {
+            width: 60px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(480px) {
+  .footer-content {
+    .countries--about--contact-us-parent {
+      .first-row {
+        flex-direction: column;
+        align-items: center;
+
+        .about-us-news-parent {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "@/assets/sass/variable";
+@import "@/assets/sass/media";
+
+.header-parent {
+  flex: 0.1;
+  padding: 10px;
+
+  .logo-parent {
+    flex: 0.2;
+  }
+
+  .icons-parent {
+    flex: 0.6;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .buttons-parent {
+    flex: 0.2;
+    align-items: center;
+
+    .login-style {
+      background: linear-gradient(to left, #0f1934, #162b64);
+    }
+
+    .signup-style {
+      background: linear-gradient(to bottom right, #fa9d73, #ff611a);
+    }
+
+    .btn-style {
+      padding: 5px 15px;
+      border-radius: 7px;
+      color: $white;
+    }
+  }
+
+  .parent-menu-icon {
+    display: none;
+  }
+}
+
+@include breakpoint(medium) {
+  .icons-parent {
+    display: none !important;
+  }
+
+  .buttons-parent {
+    display: none !important;
+  }
+
+  .parent-menu-icon {
+    display: flex !important;
+    flex: 0.9;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    align-items: center;
+  }
+}

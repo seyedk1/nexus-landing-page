@@ -1,0 +1,89 @@
+@import "@/assets/sass/variable";
+@import "@/assets/sass/media";
+
+.drawer-slide-enter-active,
+.drawer-slide-leave-active {
+  transition: transform 0.5s ease;
+}
+
+.drawer-slide-enter-from,
+.drawer-slide-leave-to {
+  transform: translateX(100%);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  .drawer-content {
+    padding: 20px;
+
+    .icon-row {
+      border-bottom: 1px solid #162b64;
+      padding: 10px 0;
+    }
+
+    .login-style {
+      background: linear-gradient(to left, #0f1934, #162b64);
+    }
+
+    .signup-style {
+      background: linear-gradient(to bottom right, #fa9d73, #ff611a);
+    }
+
+    .btn-style {
+      padding: 5px 15px;
+      border-radius: 7px;
+      color: $white;
+      margin: 5px 0;
+    }
+  }
+}
+
+
+.drawer-open .main-content {
+  margin-right: -320px; /* Width of the drawer + additional margin */
+}
+
+.header-responsive-layout {
+  transition: all 0.2s;
+  animation: openDrawer;
+  background-color: orange;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+}
+
+.background-container {
+  display: flex;
+  flex: 1;
+  background: url("@/assets/images/background-shape2.png") no-repeat scroll
+    center center;
+  background-size: cover;
+  transition: margin-right 0.5s ease;
+
+  .background-container-style {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+/* responsive */
+
+@include breakpoint(medium) {
+  .background-container-style {
+    max-width: 100%;
+  }
+
+  .parent-menu-icon {
+    display: flex;
+  }
+}
