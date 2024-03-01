@@ -40,9 +40,6 @@ export default {
       console.log("drawer.value: ", drawer.value);
     };
 
-    const clickOutside = (e) => {
-      console.log("clickOutside: ", e);
-    };
 
     const icons = ref([
       "HomeSvg",
@@ -57,7 +54,6 @@ export default {
       toggleDrawer,
       drawer,
       icons,
-      clickOutside,
     };
   },
 };
