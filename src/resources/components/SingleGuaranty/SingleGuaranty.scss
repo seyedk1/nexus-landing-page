@@ -1,3 +1,5 @@
+@import "@/assets/sass/media";
+
 .background-container {
   .background-container-style {
     .guaranties-section-container {
@@ -16,5 +18,11 @@
         }
       }
     }
+  }
+}
+
+@include breakpoint(medium) {
+  .single-guaranty-parent {
+    width: 100%;
   }
 }

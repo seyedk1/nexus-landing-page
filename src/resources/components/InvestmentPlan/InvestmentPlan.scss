@@ -24,11 +24,174 @@
         }
       }
 
-      .investment-plan-image {
-        width: 80em;
-        height: auto;
+      .investment-plan-cards-container {
+        flex-direction: column;
+        width: 100%;
+
+        .card-parent {
+          display: flex;
+          justify-content: center;
+          background: linear-gradient(to right, #5977c5, #889ed8, #8da2da);
+          border-radius: 10px;
+          position: relative;
+          color: $white;
+          padding: 2rem 0;
+          margin: 1rem 0;
+
+          .chart-style {
+            position: absolute;
+            width: 350px;
+            top: -1rem;
+            left: 5px;
+          }
+
+          .card-content {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+
+            .contract-btns-parent {
+              margin-top: 15px;
+              justify-content: center;
+
+              .contract-btn-style {
+                background: linear-gradient(to right, #ff611a, #fa9d73);
+                padding: 3px 15px;
+                border-radius: 5px;
+                margin-right: 15px;
+                color: $white;
+                font-weight: bold;
+              }
+            }
+
+            .coins--plan-btn-parent {
+              margin-top: 15px;
+
+              .parent-plan-button {
+                margin-right: -20px;
+
+                .plan-button {
+                  border: 1px solid $white;
+                  border-radius: 5px;
+                  padding: 5px 15px;
+                  font-size: 18px;
+                  color: $white;
+                  font-weight: bold;
+                  margin-bottom: 0;
+                  padding: 7px 3rem 7px 15px;
+                  text-align: -webkit-match-parent;
+                }
+              }
+              .coins-parent {
+                margin-right: 15px;
+
+                .each-coin-parent {
+                  .profit-percentage {
+                    background: linear-gradient(to right, #0f1934, #162b64);
+                    border: 1px solid #ffffff;
+                    border-radius: 25px;
+                    padding: 0 20px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+
+            .btn-style {
+              border: 1px solid $white;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-bottom: 7px;
+              font-size: 18px;
+              color: $white;
+              font-weight: bold;
+            }
+            .text {
+              font-weight: bold;
+              text-align: center;
+            }
+          }
+        }
       }
     }
   }
 }
 
+/* responsive */
+
+@include breakpoint(900px) {
+  .card-parent {
+    .chart-style {
+      width: 250px !important;
+      top: 1rem !important;
+    }
+  }
+}
+
+@include breakpoint(720px) {
+  .card-parent {
+    flex-direction: column-reverse;
+
+    .chart-style {
+      display: flex;
+      position: relative !important;
+      width: 200px !important;
+      align-self: center;
+    }
+  }
+}
+
+@include breakpoint(520px) {
+  .card-content {
+    .contract-btns-parent {
+      flex-direction: column;
+
+      .contract-btn-style {
+        margin: 7px 0;
+      }
+    }
+
+    .profit-percentage-btn-layout {
+      padding: 0 3rem;
+    }
+
+    .parent-single-parent {
+      padding: 0 3rem;
+    }
+
+    .coins--plan-btn-parent {
+      flex-direction: column-reverse;
+
+      .parent-plan-button {
+        display: flex;
+        justify-content: center;
+        margin-right: 0 !important;
+
+        .plan-button {
+          padding: 7px 15px !important;
+        }
+      }
+
+      .coins-parent {
+        flex-direction: column;
+        align-items: center;
+
+        .each-coin-parent {
+          margin: 7px 0;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(420px) {
+  .card-content {
+    .btn-style {
+      font-size: 15px !important;
+    }
+  }
+}

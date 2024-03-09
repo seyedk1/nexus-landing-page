@@ -9,11 +9,27 @@
       />
     </div>
     <div class="icons-parent d-flex">
-      <component :is="icon" v-for="(icon, i) in icons" :key="i"></component>
+      <component
+      class="icon-style"
+        :is="icon"
+        v-for="(icon, i) in icons"
+        :key="i"
+        @click="navigateTo(icon)"
+      ></component>
     </div>
     <div class="buttons-parent d-flex">
-      <button class="btn login-style btn-style me-2">Login</button>
-      <button class="btn signup-style btn-style">Sign up</button>
+      <button
+        class="btn login-style btn-style me-2"
+        @click="goToWebsite('https://hedgefundnexus.com/')"
+      >
+        Login
+      </button>
+      <button
+        class="btn signup-style btn-style"
+        @click="goToWebsite('https://hedgefundnexus.com/register')"
+      >
+        Sign up
+      </button>
     </div>
 
     <div class="parent-menu-icon">

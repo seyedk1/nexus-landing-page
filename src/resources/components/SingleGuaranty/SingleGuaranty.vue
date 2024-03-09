@@ -8,7 +8,7 @@
       <div class="svg-icon-parent">
         <component :is="item.icon"></component>
       </div>
-      <h5 class="svg-guaranty-title">{{ item.title }}</h5>
+      <h5 class="svg-guaranty-title text-center">{{ item.title }}</h5>
 
       <p class="svg-guaranty-text">
         {{ item.text }}

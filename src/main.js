@@ -1,4 +1,6 @@
 import "./assets/sass/style.scss";
+import "./axios";
+import "./stores/currency";
 
 import { createApp } from "vue";
 import { createPinia } from "pinia";

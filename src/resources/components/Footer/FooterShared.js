@@ -5,9 +5,9 @@ export default {
     const countries = ref([
       "Canada",
       "england",
-      "Germany",
-      "Iran",
-      "Israel",
+      "Sweden",
+      "Denmark",
+      "Star",
       "Japan",
       "Turkey",
       "us",
