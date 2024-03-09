@@ -50,6 +50,18 @@
             flex-direction: column;
             align-self: center;
 
+            .profit-percentage-btn-layout {
+              justify-content: space-evenly !important;
+
+              .contract-btn-style {
+                padding: 3px 2rem !important;
+
+                &:first-child {
+                  margin-left: 5rem;
+                }
+              }
+            }
+
             .contract-btns-parent {
               margin-top: 15px;
               justify-content: center;
@@ -86,6 +98,7 @@
                 margin-right: 15px;
 
                 .each-coin-parent {
+                  margin-right: 1rem;
                   .profit-percentage {
                     background: linear-gradient(to right, #0f1934, #162b64);
                     border: 1px solid #ffffff;
@@ -145,7 +158,7 @@
   }
 }
 
-@include breakpoint(520px) {
+@include breakpoint(780px) {
   .card-content {
     .contract-btns-parent {
       flex-direction: column;
@@ -157,6 +170,12 @@
 
     .profit-percentage-btn-layout {
       padding: 0 3rem;
+
+      .contract-btn-style {
+        &:first-child {
+          margin-left: unset !important;
+        }
+      }
     }
 
     .parent-single-parent {
