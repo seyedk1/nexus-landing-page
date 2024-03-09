@@ -1,20 +1,24 @@
-import { ref } from "vue";
-import HandsSvg from "@/resources/components/Icons/HandsSvg.vue";
-import HomeSvg from "@/resources/components/Icons/HomeSvg.vue";
-import MoneySvg from "@/resources/components/Icons/MoneySvg.vue";
-import OrganizationSvg from "@/resources/components/Icons/OrganizationSvg.vue";
-import SuitcaseSvg from "@/resources/components/Icons/SuitcaseSvg.vue";
-import UserSvg from "@/resources/components/Icons/UserSvg.vue";
+import { onUnmounted, ref } from "vue";
+
+import {
+  CurrencySvg,
+  HomeSvg,
+  InvestmentSvg,
+  AboutSvg,
+  GuarantySvg,
+  UserSvg,
+} from "@/resources/components/Icons";
+
 import SvgIcon from "@jamescoyle/vue-icon";
 import { mdiMenu } from "@mdi/js";
 
 export default {
   components: {
-    HandsSvg,
+    CurrencySvg,
     HomeSvg,
-    MoneySvg,
-    OrganizationSvg,
-    SuitcaseSvg,
+    InvestmentSvg,
+    AboutSvg,
+    GuarantySvg,
     UserSvg,
     SvgIcon,
   },
@@ -23,18 +27,38 @@ export default {
     const path = ref(mdiMenu);
     const icons = ref([
       "HomeSvg",
-      "HandsSvg",
-      "MoneySvg",
-      "OrganizationSvg",
-      "SuitcaseSvg",
+      "CurrencySvg",
+      "InvestmentSvg",
+      "AboutSvg",
+      "GuarantySvg",
       "UserSvg",
     ]);
 
-    // let drawer = ref(false);
+    const goToWebsite = (url) => {
+      window.location.href = url;
+    };
+
+    const navigateTo = (icon) => {
+      console.log("which hash: ", icon);
+      // const a = icon.split("Svg");
+      const hash = icon.toLowerCase().replace("svg", "");
+      const targetElement = document.getElementById(hash);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    };
+
+    onUnmounted(() => {
+      console.log("unMount Header");
+    });
     return {
       icons,
       path,
-      // drawer,
+      navigateTo,
+      goToWebsite,
     };
   },
 };

@@ -15,12 +15,22 @@
               v-for="(icon, i) in icons"
               :key="i"
             >
-              <component :is="icon"></component>
+              <component :is="icon" @click="navigateTo(icon)"></component>
             </div>
 
             <div class="buttons-parent d-flex flex-column">
-              <button class="btn login-style btn-style me-2">Login</button>
-              <button class="btn signup-style btn-style">Sign up</button>
+              <button
+                class="btn login-style btn-style me-2"
+                @click="goToWebsite('https://hedgefundnexus.com')"
+              >
+                Login
+              </button>
+              <button
+                class="btn signup-style btn-style"
+                @click="goToWebsite('https://hedgefundnexus.com/register')"
+              >
+                Sign up
+              </button>
             </div>
           </div>
         </div>
@@ -29,6 +39,7 @@
 
     <Banner />
 
+    <Currencies />
     <div class="background-container">
       <div class="container background-container-style">
         <InvestmentPlan />

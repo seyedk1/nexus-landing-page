@@ -39,10 +39,8 @@
         </div>
 
         <div class="numbers-parent d-flex flex-column">
-          <span>info@ hedgefundnexus.com</span>
-          <span>+11 (0) 20 30 40 50</span>
-          <span>+11 (0) 10 30 30 50</span>
-          <span>+11 (0) 20 30 10 40</span>
+          <span>info@hedgefundnexus.com</span>
+          <span>+46700482099</span>
         </div>
       </div>
 

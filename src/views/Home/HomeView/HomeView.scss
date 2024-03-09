@@ -20,6 +20,7 @@
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  z-index: 100;
 
   .drawer-content {
     padding: 20px;
@@ -46,7 +47,6 @@
   }
 }
 
-
 .drawer-open .main-content {
   margin-right: -320px; /* Width of the drawer + additional margin */
 }
@@ -64,7 +64,7 @@
 .background-container {
   display: flex;
   flex: 1;
-  background: url("@/assets/images/background-shape2.png") no-repeat scroll
+  background: url("@/assets/images/background-shape.png") no-repeat scroll
     center center;
   background-size: cover;
   transition: margin-right 0.5s ease;

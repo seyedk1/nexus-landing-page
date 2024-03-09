@@ -1,16 +1,12 @@
 <template>
-  <div class="banner">
-    <div class="content-parent d-flex flex-column">
+  <div class="banner" id="home">
+    <div class="content-parent d-flex flex-column col-6 col-sm-5 col-lg-4">
       <h2 class="content-text-style title">
-        Let the experts <br />
-        take care of your <br />
-        investment
+        {{ title }}
       </h2>
 
       <span class="content-text-style">
-        Pay once, pass the test and get funded! <br />
-        Keep up to 80% of profits, trade anytime, <br />
-        and hold trades over the weekend
+        {{ description }}
       </span>
 
       <div class="banner-button-parent mt-3">
